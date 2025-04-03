@@ -298,7 +298,7 @@ export const DesignTab: FC = () => {
             <Row $selected={true}>
               <IconContainer>
                 <FontAwesomeIcon icon={faBook} />
-                <MenuTooltip>Add Definition</MenuTooltip>
+                <MenuTooltip>配置</MenuTooltip>
               </IconContainer>
             </Row>
           </MenuContainer>
@@ -306,7 +306,7 @@ export const DesignTab: FC = () => {
         <SpanOverflowCell>
           <Container>
             <ControlRow>
-              <Label>Load Draft Definition</Label>
+              <Label>加载本地的布局配置</Label>
               <Detail>
                 <AccentUploadButton
                   multiple
@@ -325,7 +325,7 @@ export const DesignTab: FC = () => {
               </Detail>
             </ControlRow>
             <ControlRow>
-              <Label>Use V2 definitions (deprecated)</Label>
+              <Label>使用V2版本配置（已弃用）</Label>
               <Detail>
                 <AccentSlider
                   isChecked={definitionVersion === 'v2'}
@@ -338,7 +338,7 @@ export const DesignTab: FC = () => {
             {definition && (
               <>
                 <ControlRow>
-                  <Label>Shown Keyboard Definition</Label>
+                  <Label>当前键盘配置</Label>
                   <Detail>
                     <AccentSelect
                       onChange={(option: any) => {
@@ -369,7 +369,7 @@ export const DesignTab: FC = () => {
             )}
             {definition && (
               <ControlRow>
-                <Label>Show Matrix</Label>
+                <Label>显示键盘矩阵</Label>
                 <Detail>
                   <AccentSlider
                     isChecked={showMatrix}
@@ -386,9 +386,9 @@ export const DesignTab: FC = () => {
               </IndentedControlRow>
             ))}
             <ControlRow>
-              <Label>Draft Definitions</Label>
+              <Label>已有的布局配置</Label>
               <Detail>
-                {Object.values(versionDefinitions).length} Definitions
+                {Object.values(versionDefinitions).length} 配置
               </Detail>
             </ControlRow>
             {versionDefinitions.map((definition) => {

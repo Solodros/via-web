@@ -177,7 +177,7 @@ export const KeycodeModal: React.FC<KeycodeModalProps> = (props) => {
     <ModalBackground>
       <ModalContainer>
         <PromptText>
-          Please enter your desired QMK keycode or hex code:
+        请输入QMK键码或十六进制代码:
         </PromptText>
         <div>
           <div>
@@ -209,7 +209,7 @@ export const KeycodeModal: React.FC<KeycodeModalProps> = (props) => {
           </AutocompleteContainer>
         </div>
         <RowDiv>
-          <AccentButton onClick={props.onExit}>Cancel</AccentButton>
+          <AccentButton onClick={props.onExit}>取消</AccentButton>
           <PrimaryAccentButton
             disabled={!isValid}
             onClick={() => {
@@ -218,7 +218,7 @@ export const KeycodeModal: React.FC<KeycodeModalProps> = (props) => {
               );
             }}
           >
-            Confirm
+            确认
           </PrimaryAccentButton>
         </RowDiv>
       </ModalContainer>

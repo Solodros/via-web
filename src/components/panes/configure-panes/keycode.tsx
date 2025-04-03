@@ -293,10 +293,10 @@ export const KeycodePane: FC = () => {
       <CustomKeycode
         key="customKeycode"
         onClick={() => selectedKey !== null && handleClick('text', 0)}
-        onMouseOver={() => setMouseOverDesc('Enter any QMK Keycode')}
+        onMouseOver={() => setMouseOverDesc('输入任意QMK键码或十六进制代码')}
         onMouseOut={() => setMouseOverDesc(null)}
       >
-        Any
+        任意键
       </CustomKeycode>
     );
   };

@@ -10,6 +10,6 @@ const SvgIcMemory24Px: React.FC<{}> = (props) => (
 );
 
 export default {
-  title: 'Debug',
+  title: '调试',
   component: SvgIcMemory24Px,
 };

@@ -169,7 +169,7 @@ const Loader: React.FC<{
       {<ChippyLoader theme={theme} progress={loadProgress || null} />}
       {(showButton || noConnectedDevices) && !noSupportedIds && !isElectron ? (
         <AccentButtonLarge onClick={() => dispatch(reloadConnectedDevices())}>
-          Authorize device
+          连接设备
           <FontAwesomeIcon style={{marginLeft: '10px'}} icon={faPlus} />
         </AccentButtonLarge>
       ) : (
@@ -221,7 +221,7 @@ const ConfigureGrid = () => {
   const selectedTitle = KeyboardRows[selectedRow]?.Title;
 
   useEffect(() => {
-    if (selectedTitle !== 'Keymap') {
+    if (selectedTitle !== '按键') {
       dispatch(setConfigureKeyboardIsSelectable(false));
     } else {
       dispatch(setConfigureKeyboardIsSelectable(true));

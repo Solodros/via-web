@@ -102,7 +102,7 @@ const printBytesUsed = (bytesUsed: number, bufferSize: number) => {
 
   return `${convertedBytesUsed.toFixed(scale)} / ${convertedBufferSize.toFixed(
     scale,
-  )} ${suffix} space used`;
+  )} ${suffix} 已使用空间`;
 };
 
 const BufferSizeUsage = () => {

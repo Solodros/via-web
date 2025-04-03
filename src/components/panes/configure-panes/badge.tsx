@@ -138,7 +138,7 @@ const KeyboardSelectors: React.FC<{
         })}
         {!isElectron && (
           <KeyboardButton onClick={requestAndChangeDevice}>
-            Authorize New
+            连接新设备
             <FontAwesomeIcon icon={faPlus} style={{marginLeft: '10px'}} />
           </KeyboardButton>
         )}

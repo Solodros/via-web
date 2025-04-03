@@ -390,7 +390,7 @@ function buildLayerMenu(): IKeycodeMenu {
 
   const menu: IKeycodeMenu = {
     id: 'layers',
-    label: 'Layers',
+    label: '层按键',
     width: 'label',
     keycodes: [
       {
@@ -483,10 +483,10 @@ export function getKeycodes(numMacros = 16): IKeycodeMenu[] {
   return [
     {
       id: 'basic',
-      label: 'Basic',
+      label: '基础按键',
       keycodes: [
-        {name: '', code: 'KC_NO', title: 'Nothing'},
-        {name: '▽', code: 'KC_TRNS', title: 'Pass-through'},
+        {name: '空白', code: 'KC_NO', title: 'Nothing'},
+        {name: '穿透', code: 'KC_TRNS', title: 'Pass-through'},
         // TODO: remove "shortName" when multiline keycap labels are working
         {name: 'Esc', code: 'KC_ESC', keys: 'esc'},
         {name: 'A', code: 'KC_A', keys: 'a'},
@@ -638,7 +638,7 @@ export function getKeycodes(numMacros = 16): IKeycodeMenu[] {
     },
     {
       id: 'wt_lighting',
-      label: 'Lighting',
+      label: '灯光',
       width: 'label',
       keycodes: [
         {
@@ -729,7 +729,7 @@ export function getKeycodes(numMacros = 16): IKeycodeMenu[] {
     },
     {
       id: 'media',
-      label: 'Media',
+      label: '多媒体键',
       width: 'label',
       keycodes: [
         {name: 'Vol -', code: 'KC_VOLD', title: 'Volume Down'},
@@ -747,14 +747,14 @@ export function getKeycodes(numMacros = 16): IKeycodeMenu[] {
     },
     {
       id: 'macro',
-      label: 'Macro',
+      label: '宏按键',
       width: 'label',
       keycodes: generateMacros(numMacros)
     },
     buildLayerMenu(),
     {
       id: 'special',
-      label: 'Special',
+      label: '特殊按键',
       width: 'label',
       keycodes: [
         {name: '~', code: 'S(KC_GRV)', keys: '`', title: 'Shift + `'},
@@ -927,6 +927,29 @@ export function getKeycodes(numMacros = 16): IKeycodeMenu[] {
         {name: 'Music Mode', code: 'MU_MOD'},
       ],
     },
+    {
+      id: 'tap_dance',
+      label: '按键复用',
+      width: 'label',
+      keycodes: [
+        {name: 'TD0', code: 'TAP_DANCE_0'},
+        {name: 'TD1', code: 'TAP_DANCE_1'},
+        {name: 'TD2', code: 'TAP_DANCE_2'},
+        {name: 'TD3', code: 'TAP_DANCE_3'},
+        {name: 'TD4', code: 'TAP_DANCE_4'},
+        {name: 'TD5', code: 'TAP_DANCE_5'},
+        {name: 'TD6', code: 'TAP_DANCE_6'},
+        {name: 'TD7', code: 'TAP_DANCE_7'},
+        {name: 'TD8', code: 'TAP_DANCE_8'},
+        {name: 'TD9', code: 'TAP_DANCE_9'},
+        {name: 'TD10', code: 'TAP_DANCE_10'},
+        {name: 'TD11', code: 'TAP_DANCE_11'},
+        {name: 'TD12', code: 'TAP_DANCE_12'},
+        {name: 'TD13', code: 'TAP_DANCE_13'},
+        {name: 'TD14', code: 'TAP_DANCE_14'},
+        {name: 'TD15', code: 'TAP_DANCE_15'},
+      ],
+    },
     /* These are for controlling the original backlighting and bottom RGB. */
     {
       id: 'qmk_lighting',
@@ -967,7 +990,7 @@ export function getKeycodes(numMacros = 16): IKeycodeMenu[] {
     */
     {
       id: 'custom',
-      label: 'Custom',
+      label: '自定义',
       width: 'label',
       keycodes: [
         {name: 'CUSTOM(0)', code: 'CUSTOM(0)', title: 'Custom Keycode 0'},
@@ -995,7 +1018,7 @@ export const categoriesForKeycodeModule = (
   keycodeModule: BuiltInKeycodeModule | 'default',
 ) =>
   ({
-    default: ['basic', 'media', 'macro', 'layers', 'special'],
+    default: ['basic', 'media', 'macro', 'layers', 'special', 'tap_dance'],
     [BuiltInKeycodeModule.WTLighting]: ['wt_lighting'],
     [BuiltInKeycodeModule.QMKLighting]: ['qmk_lighting'],
   }[keycodeModule]);

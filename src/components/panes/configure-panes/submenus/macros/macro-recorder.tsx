@@ -337,7 +337,7 @@ export const MacroRecorder: React.FC<{
         {sequence.length ? (
           sequence
         ) : (
-          <NoMacroRecorded>No macro recorded yet...</NoMacroRecorded>
+          <NoMacroRecorded>尚未录制宏...</NoMacroRecorded>
         )}
       </MacroSequenceContainer>
       <div
